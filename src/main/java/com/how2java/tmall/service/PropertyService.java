@@ -1,6 +1,7 @@
 package com.how2java.tmall.service;
 
 import com.how2java.tmall.pojo.Property;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @Author liqipiao
  * @Date 2019/12/29 0029 20:43
  **/
+
 public interface PropertyService {
     void add(Property c);
     void delete(int id);
