@@ -18,7 +18,7 @@ public class TestTmall {
  
         try (
                 Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/tmall_ssm?useUnicode=true&characterEncoding=utf8",
-                        "root", "admin");
+                        "root", "123456");
                 Statement s = c.createStatement();
         )
         {
@@ -26,7 +26,7 @@ public class TestTmall {
 
             s.execute("delete from category");
             for (int i = 1; i <=10 ; i++) {
-                String sqlFormat = "insert into category values (null, '测试分类%d')";
+                String sqlFormat = "insert into user values (null, '测试分类%d')";
                 String sql = String.format(sqlFormat, i);
                 System.out.println(sql);
                 s.execute(sql);

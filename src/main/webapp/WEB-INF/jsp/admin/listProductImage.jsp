@@ -93,7 +93,6 @@
             </td>
             <td class="addPictureTableTD">
                 <div>
-
                     <div class="panel panel-warning addPictureDiv">
                         <div class="panel-heading">新增产品<b class="text-primary"> 详情 </b>图片</div>
                         <div class="panel-body">

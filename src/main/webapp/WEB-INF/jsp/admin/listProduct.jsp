@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: liqipiao
-  Date: 2020/1/8 0008
-  Time: 16:07
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" import="java.util.*"%>
 
@@ -41,7 +34,8 @@
     </ol>
 
     <div class="listDataTableDiv">
-        <table class="table table-striped table-bordered table-hover  table-condensed">
+        <table
+                class="table table-striped table-bordered table-hover  table-condensed">
             <thead>
             <tr class="success">
                 <th>ID</th>
@@ -62,11 +56,9 @@
                 <tr>
                     <td>${p.id}</td>
                     <td>
-
-                            <%--<c:if test="${!empty p.firstProductImage}">--%>
-                            <%--<img width="40px" src="img/productSingle/${p.firstProductImage.id}.jpg">--%>
-                            <%--</c:if>--%>
-
+                        <c:if test="${!empty p.firstProductImage}">
+                            <img width="40px" src="img/productSingle/${p.firstProductImage.id}.jpg">
+                        </c:if>
                     </td>
                     <td>${p.name}</td>
                     <td>${p.subTitle}</td>
@@ -123,6 +115,7 @@
             </form>
         </div>
     </div>
+
 </div>
 
 <%@include file="../include/admin/adminFooter.jsp"%>
