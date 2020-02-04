@@ -45,4 +45,37 @@ public class UserServiceImpl implements UserService{
         example.setOrderByClause("id desc");
         return userMapper.selectByExample(example);
     }
+
+    /**
+     * 判断某个名称是否已经被使用过了。
+     * @param name 用户名
+     * @return 如果没有使用过返回false
+     */
+    @Override
+    public boolean isExist(String name) {
+        UserExample example=new UserExample();
+        example.createCriteria().andNameEqualTo(name);
+        List<User> result=userMapper.selectByExample(example);
+        if (!result.isEmpty()){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 用于全部太登录
+     * @param name 用户名
+     * @param password 密码
+     * @return
+     */
+    @Override
+    public User get(String name, String password) {
+        UserExample example=new UserExample();
+        example.createCriteria().andNameEqualTo(name).andPasswordEqualTo(password);
+        List<User> result=userMapper.selectByExample(example);
+        if (result.isEmpty()){
+            return null;
+        }
+        return result.get(0);
+    }
 }

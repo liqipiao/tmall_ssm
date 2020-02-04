@@ -1,5 +1,6 @@
 package com.how2java.tmall.service;
 
+import com.how2java.tmall.pojo.Category;
 import com.how2java.tmall.pojo.Product;
 
 import java.util.List;
@@ -18,4 +19,14 @@ public interface ProductService {
     List list(int cid);
 
     void setFirstProductImage(Product product);
+
+    void fill(List<Category> cs);
+
+    void fill(Category c);
+
+    void fillByRow(List<Category> cs);
+
+    //增加为产品设置销量和评价数量的方法：
+    void setSaleAndReviewNumber(Product p);
+    void setSaleAndReviewNumber(List<Product> ps);
 }

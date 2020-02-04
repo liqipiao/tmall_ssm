@@ -25,6 +25,18 @@ public class Product {
 
     private ProductImage firstProductImage;
 
+    //单个产品集合图片
+    private List<ProductImage> productSingleImages;
+
+    //详情产品图片集合
+    private List<ProductImage> productDetailImages;
+
+    //销量
+    private int saleCount;
+
+    //积累评价
+    private int reviewCount;
+
     public ProductImage getFirstProductImage() {
         return firstProductImage;
     }
@@ -105,4 +117,35 @@ public class Product {
         this.createDate = createDate;
     }
 
+    public List<ProductImage> getProductSingleImages() {
+        return productSingleImages;
+    }
+
+    public void setProductSingleImages(List<ProductImage> productSingleImages) {
+        this.productSingleImages = productSingleImages;
+    }
+
+    public List<ProductImage> getProductDetailImages() {
+        return productDetailImages;
+    }
+
+    public void setProductDetailImages(List<ProductImage> productDetailImages) {
+        this.productDetailImages = productDetailImages;
+    }
+
+    public int getSaleCount() {
+        return saleCount;
+    }
+
+    public void setSaleCount(int saleCount) {
+        this.saleCount = saleCount;
+    }
+
+    public int getReviewCount() {
+        return reviewCount;
+    }
+
+    public void setReviewCount(int reviewCount) {
+        this.reviewCount = reviewCount;
+    }
 }

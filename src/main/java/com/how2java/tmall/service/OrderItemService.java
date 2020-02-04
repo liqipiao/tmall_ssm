@@ -20,4 +20,6 @@ public interface OrderItemService {
 
     void file(List<Order> orders);
     void file(Order order);
+    //根据产品获取销售量的方法
+    int getSaleCount(int  pid);
 }

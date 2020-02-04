@@ -16,4 +16,7 @@ public interface UserService {
     void delete(int id);
     User get(int id);
     List list();
+    boolean isExist(String name);
+    //用于登录
+    User get(String name,String password);
 }
