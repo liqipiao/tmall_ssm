@@ -32,7 +32,7 @@ public class PageController {
     }
 
     @RequestMapping("forealipay")
-    public String forealipay(){
-        return "fore/forealipay";
+    public String alipay(){
+        return "fore/alipay";
     }
 }

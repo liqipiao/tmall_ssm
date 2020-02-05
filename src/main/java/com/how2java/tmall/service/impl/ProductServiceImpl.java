@@ -116,7 +116,7 @@ public class ProductServiceImpl implements ProductService {
             c.setProductsByRow(productsByRow);
         }
     }
-
+    //设置评价和销量
     @Override
     public void setSaleAndReviewNumber(Product p) {
         int SaleCount=orderItemService.getSaleCount(p.getId());
@@ -124,12 +124,23 @@ public class ProductServiceImpl implements ProductService {
         int reviewCount = reviewService.getCount(p.getId());
         p.setReviewCount(reviewCount);
     }
-
+    //设置评价和销量
     @Override
     public void setSaleAndReviewNumber(List<Product> ps) {
         for (Product p : ps) {
             setSaleAndReviewNumber(p);
         }
+    }
+    //模糊查询方法
+    @Override
+    public List<Product> search(String keyword) {
+        ProductExample example=new ProductExample();
+        example.createCriteria().andNameLike("%"+keyword+"%");
+        example.setOrderByClause("id desc");
+        List result=productMapper.selectByExample(example);
+        setFirstProductImage(result);
+        setCategory(result);
+        return result;
     }
 
 }

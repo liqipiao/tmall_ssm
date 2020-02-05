@@ -20,6 +20,11 @@ public interface OrderItemService {
 
     void file(List<Order> orders);
     void file(Order order);
+
+    void fill(List<Order> os);
+    void fill(Order o);
     //根据产品获取销售量的方法
     int getSaleCount(int  pid);
+    //立即购买方法
+    List<OrderItem> listByUser(int uid);
 }

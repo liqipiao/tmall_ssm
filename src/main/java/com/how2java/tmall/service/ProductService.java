@@ -29,4 +29,6 @@ public interface ProductService {
     //增加为产品设置销量和评价数量的方法：
     void setSaleAndReviewNumber(Product p);
     void setSaleAndReviewNumber(List<Product> ps);
+    //模糊查询方法
+    List<Product> search(String keyword);
 }
